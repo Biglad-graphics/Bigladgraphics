@@ -299,3 +299,9 @@ body{background:var(--bg);color:var(--t1);font-family:var(--f-b);min-height:100v
   .gallery-grid{grid-template-columns:1fr;grid-auto-rows:200px}
   .footer-links{flex-wrap:wrap;gap:12px}
 }
+
+/* ── LIGHTBOX INFO ── */
+.lb-info{margin-bottom:18px}
+.lb-cat{display:inline-block;padding:4px 12px;border-radius:var(--r-pill);background:var(--a-dim);border:1px solid var(--bdr-a);color:var(--a);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+.lb-title{font-family:var(--f-h);font-size:1.1rem;font-weight:700;color:var(--t1);margin-bottom:6px;line-height:1.3}
+.lb-desc{font-size:.83rem;color:var(--t2);line-height:1.65}

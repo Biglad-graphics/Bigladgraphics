@@ -1,19 +1,42 @@
 'use strict';
 
-/* Scroll reveal */
+/* ── GALLERY RENDER ── */
+const CAT_COLOR = { brand:'g-t1', social:'g-t2', mockup:'g-t3', poster:'g-t4', sports:'g-t5' };
+
+function renderGallery(data) {
+  const grid = document.getElementById('galleryGrid');
+  if (!grid || !data) return;
+  grid.innerHTML = data.map(item => {
+    const cls   = 'g-item' + (item.wide ? ' g-wide' : '') + (item.tall ? ' g-tall' : '');
+    const color = CAT_COLOR[item.cat] || 'g-t6';
+    const thumbAttr = item.image
+      ? `style="background-image:url('${item.image}');background-size:cover;background-position:center top"`
+      : '';
+    const thumbClass = 'g-thumb' + (item.image ? '' : ' ' + color);
+    return `<div class="${cls}" data-cat="${item.cat}" data-label="${item.label}" data-desc="${item.desc||''}" data-img="${item.image||''}" data-aos="fade-up">
+      <div class="${thumbClass}" ${thumbAttr}><span>${item.label}</span></div>
+    </div>`;
+  }).join('');
+  attachGalleryEvents();
+  grid.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
+}
+
+if (window.GALLERY_DATA) renderGallery(window.GALLERY_DATA);
+
+/* ── SCROLL REVEAL ── */
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
 
-/* Nav scroll bg */
+/* ── NAV SCROLL BG ── */
 const nav = document.getElementById('topNav');
 window.addEventListener('scroll', () => {
   nav.style.background = window.scrollY > 50 ? 'rgba(8,8,14,.97)' : '';
   nav.style.boxShadow  = window.scrollY > 50 ? '0 1px 0 rgba(255,255,255,.04)' : '';
 }, { passive: true });
 
-/* Tool stagger */
+/* ── TOOL STAGGER ── */
 document.querySelectorAll('.tool').forEach((el, i) => {
   el.style.opacity = '0'; el.style.transform = 'translateY(12px)';
   setTimeout(() => {
@@ -22,7 +45,7 @@ document.querySelectorAll('.tool').forEach((el, i) => {
   }, 650 + i * 75);
 });
 
-/* Mascot sway */
+/* ── MASCOT SWAY ── */
 const mw = document.getElementById('mascotWrap');
 let raf;
 document.addEventListener('mousemove', e => {
@@ -36,70 +59,82 @@ document.addEventListener('mousemove', e => {
   });
 });
 
-/* Stats counter */
-const statNums = document.querySelectorAll('.stat-num[data-target]');
+/* ── STATS COUNTER ── */
 const countObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
     const el = e.target;
     const target = +el.dataset.target;
-    const dur = 1800; const step = 16;
-    const inc = target / (dur / step);
+    const inc = target / (1800 / 16);
     let cur = 0;
     const timer = setInterval(() => {
       cur = Math.min(cur + inc, target);
       el.textContent = Math.floor(cur);
       if (cur >= target) clearInterval(timer);
-    }, step);
+    }, 16);
     countObs.unobserve(el);
   });
 }, { threshold: 0.5 });
-statNums.forEach(el => countObs.observe(el));
+document.querySelectorAll('.stat-num[data-target]').forEach(el => countObs.observe(el));
 
-/* Gallery filters */
-const filterBtns = document.querySelectorAll('.gf-btn');
-const galleryItems = document.querySelectorAll('.g-item');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    galleryItems.forEach(item => {
-      const show = f === 'all' || item.dataset.cat === f;
-      item.style.transition = 'opacity .3s ease, transform .3s ease';
-      if (show) { item.classList.remove('hidden'); item.style.opacity = '1'; item.style.transform = ''; }
-      else { item.style.opacity = '0'; item.style.transform = 'scale(.95)'; setTimeout(() => item.classList.add('hidden'), 300); }
+/* ── GALLERY FILTERS + LIGHTBOX ── */
+const lb       = document.getElementById('lightbox');
+const lbOverlay= document.getElementById('lbOverlay');
+const lbClose  = document.getElementById('lbClose');
+const lbPreview= document.getElementById('lbPreview');
+const lbCatEl  = document.getElementById('lbCat');
+const lbTitleEl= document.getElementById('lbTitle');
+const lbDescEl = document.getElementById('lbDesc');
+const lbOrder  = document.getElementById('lbOrder');
+
+const CAT_NAME = { brand:'Branding', social:'Social', mockup:'Mockup', poster:'Posters', sports:'Sports' };
+
+function attachGalleryEvents() {
+  /* Filters */
+  const filterBtns  = document.querySelectorAll('.gf-btn');
+  const galleryItems = document.querySelectorAll('.g-item');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      galleryItems.forEach(item => {
+        const show = f === 'all' || item.dataset.cat === f;
+        item.style.transition = 'opacity .3s ease, transform .3s ease';
+        if (show) { item.classList.remove('hidden'); item.style.opacity = '1'; item.style.transform = ''; }
+        else { item.style.opacity = '0'; item.style.transform = 'scale(.95)'; setTimeout(() => item.classList.add('hidden'), 300); }
+      });
     });
   });
-});
 
-/* Lightbox */
-const lb = document.getElementById('lightbox');
-const lbOverlay = document.getElementById('lbOverlay');
-const lbClose = document.getElementById('lbClose');
-const lbPreview = document.getElementById('lbPreview');
-
-document.querySelectorAll('.g-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const thumb = item.querySelector('.g-thumb');
-    if (thumb && lbPreview) {
-      lbPreview.innerHTML = '';
-      const clone = thumb.cloneNode(true);
-      clone.style.height = '100%';
-      lbPreview.appendChild(clone);
-    }
-    if (lb) { lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  /* Lightbox open */
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const thumb = item.querySelector('.g-thumb');
+      if (thumb && lbPreview) {
+        lbPreview.innerHTML = '';
+        const clone = thumb.cloneNode(true);
+        clone.style.cssText = 'width:100%;height:100%;background-size:cover;background-position:center top';
+        lbPreview.appendChild(clone);
+      }
+      const cat = item.dataset.cat || '';
+      if (lbCatEl)   lbCatEl.textContent   = CAT_NAME[cat] || cat;
+      if (lbTitleEl) lbTitleEl.textContent  = item.dataset.label || '';
+      if (lbDescEl)  lbDescEl.textContent   = item.dataset.desc  || 'A showcase piece from the Biglad Graphics portfolio.';
+      if (lb) { lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    });
   });
-});
+}
 
 function closeLightbox() {
   if (lb) { lb.classList.remove('open'); document.body.style.overflow = ''; }
 }
 if (lbOverlay) lbOverlay.addEventListener('click', closeLightbox);
 if (lbClose)   lbClose.addEventListener('click', closeLightbox);
+if (lbOrder)   lbOrder.addEventListener('click', () => { closeLightbox(); document.getElementById('quote').scrollIntoView({ behavior:'smooth' }); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-/* WhatsApp quote form */
+/* ── QUOTE FORM → WHATSAPP ── */
 const qForm = document.getElementById('quoteForm');
 if (qForm) {
   qForm.addEventListener('submit', e => {
@@ -113,7 +148,7 @@ if (qForm) {
   });
 }
 
-/* Feedback form → WhatsApp */
+/* ── FEEDBACK FORM → WHATSAPP ── */
 const fbForm = document.getElementById('feedbackForm');
 if (fbForm) {
   fbForm.addEventListener('submit', e => {
@@ -126,7 +161,7 @@ if (fbForm) {
   });
 }
 
-/* Mobile nav */
+/* ── MOBILE NAV ── */
 const burger    = document.getElementById('navBurger');
 const mobileNav = document.getElementById('navMobile');
 if (burger && mobileNav) {
@@ -134,7 +169,7 @@ if (burger && mobileNav) {
 }
 function closeMobile() { if (mobileNav) mobileNav.classList.remove('open'); }
 
-/* Card arrow ripple */
+/* ── CARD RIPPLE ── */
 document.querySelectorAll('.c-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const r = document.createElement('span');
