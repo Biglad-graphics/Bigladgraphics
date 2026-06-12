@@ -3,10 +3,10 @@
 /* Scroll reveal */
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 document.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
 
-/* Nav scroll background */
+/* Nav scroll */
 const nav = document.getElementById('topNav');
 window.addEventListener('scroll', () => {
   nav.style.background = window.scrollY > 50 ? 'rgba(8,8,14,.97)' : '';
@@ -21,14 +21,12 @@ document.querySelectorAll('.nav-pill[data-href]').forEach(btn => {
   });
 });
 
-/* Tool items fade-in stagger */
+/* Tool stagger */
 document.querySelectorAll('.tool').forEach((el, i) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(12px)';
+  el.style.opacity = '0'; el.style.transform = 'translateY(12px)';
   setTimeout(() => {
     el.style.transition = 'opacity .45s ease, transform .45s ease, filter .3s, transform .3s cubic-bezier(.34,1.56,.64,1)';
-    el.style.opacity = '1';
-    el.style.transform = 'translateY(0)';
+    el.style.opacity = '1'; el.style.transform = 'translateY(0)';
   }, 650 + i * 75);
 });
 
@@ -44,7 +42,7 @@ if (th) {
   }, { threshold: 0.3 }).observe(th);
 }
 
-/* Gentle mascot sway on mouse move */
+/* Mascot sway */
 const mw = document.getElementById('mascotWrap');
 let raf;
 document.addEventListener('mousemove', e => {
@@ -57,6 +55,58 @@ document.addEventListener('mousemove', e => {
     mw.style.transition = 'transform .55s ease';
   });
 });
+
+/* Stats counter animation */
+const statNums = document.querySelectorAll('.stat-num[data-target]');
+const countObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = +el.dataset.target;
+    const dur = 1800;
+    const step = 16;
+    const inc = target / (dur / step);
+    let cur = 0;
+    const timer = setInterval(() => {
+      cur = Math.min(cur + inc, target);
+      el.textContent = Math.floor(cur);
+      if (cur >= target) clearInterval(timer);
+    }, step);
+    countObs.unobserve(el);
+  });
+}, { threshold: 0.5 });
+statNums.forEach(el => countObs.observe(el));
+
+/* Gallery filters */
+const filterBtns = document.querySelectorAll('.gf-btn');
+const galleryItems = document.querySelectorAll('.g-item');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    galleryItems.forEach(item => {
+      const show = f === 'all' || item.dataset.cat === f;
+      item.style.transition = 'opacity .3s ease, transform .3s ease';
+      if (show) { item.classList.remove('hidden'); item.style.opacity='1'; item.style.transform=''; }
+      else { item.style.opacity='0'; item.style.transform='scale(.95)'; setTimeout(() => item.classList.add('hidden'), 300); }
+    });
+  });
+});
+
+/* WhatsApp quote form */
+const qForm = document.getElementById('quoteForm');
+if (qForm) {
+  qForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = qForm.querySelector('[name=name]').value.trim();
+    const phone = qForm.querySelector('[name=phone]').value.trim();
+    const type = qForm.querySelector('[name=type]').value;
+    const desc = qForm.querySelector('[name=desc]').value.trim();
+    const msg = `Hi Biglad! 👋\n\nName: ${name}\nPhone/Email: ${phone}\nProject Type: ${type}\n\nProject Details:\n${desc}`;
+    window.open(`https://wa.me/2349036997098?text=${encodeURIComponent(msg)}`, '_blank');
+  });
+}
 
 /* Card arrow ripple */
 document.querySelectorAll('.c-btn').forEach(btn => {
