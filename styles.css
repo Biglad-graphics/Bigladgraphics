@@ -568,6 +568,7 @@ body::after {
 .movie-thumb  .thumb-bg { background: linear-gradient(135deg, #0d1a2d, #1a2d4a); }
 .sports-thumb .thumb-bg { background: linear-gradient(135deg, #1a1a0d, #2d2d1a); }
 .ai-thumb     .thumb-bg { background: linear-gradient(135deg, #0d2020, #1a3535); }
+.mockup-thumb .thumb-bg { background: linear-gradient(135deg, #0d1a1a, #1a2d35); }
 
 .thumb-icon {
   position: relative;
