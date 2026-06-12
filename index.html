@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivann — Graphic / Product / Brand Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ── TOP NAVIGATION ── -->
+  <nav class="top-nav" id="topNav">
+    <button class="nav-pill" data-href="#work">
+      <svg class="pill-icon" viewBox="0 0 20 20" fill="none"><polygon points="6,3 17,10 6,17" fill="currentColor"/></svg>
+      See my work
+    </button>
+    <button class="nav-pill center-pill" data-href="#catalog">
+      <svg class="pill-icon" viewBox="0 0 20 20" fill="none"><path d="M3 4h14l-1.5 9H4.5L3 4Z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="8" cy="17" r="1.2" fill="currentColor"/><circle cx="13" cy="17" r="1.2" fill="currentColor"/></svg>
+      My catalog
+    </button>
+    <button class="nav-pill active" data-href="#contact">
+      <svg class="pill-icon" viewBox="0 0 20 20" fill="none"><polyline points="3,10 8,15 17,5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Book a service
+    </button>
+  </nav>
+
+  <!-- ── HERO SECTION ── -->
+  <section class="hero" id="work">
+    <!-- ambient blobs -->
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
+
+    <div class="hero-inner">
+      <!-- Left label -->
+      <div class="hero-left" data-aos="fade-right">
+        <div class="hero-divider"></div>
+        <p class="hero-role">Graphic/Product<br>&amp; Brand Designer</p>
+      </div>
+
+      <!-- Centre: Avatar + Name -->
+      <div class="hero-center">
+        <div class="avatar-wrap" id="avatarWrap">
+          <div class="avatar-ring ring-outer"></div>
+          <div class="avatar-ring ring-inner"></div>
+          <div class="avatar-glow-halo"></div>
+
+          <!-- SVG Character -->
+          <svg class="avatar-svg" viewBox="0 0 340 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body shadow/ground reflection -->
+            <ellipse cx="170" cy="510" rx="80" ry="12" fill="url(#shadowGrad)" opacity="0.7"/>
+
+            <!-- Shirt / torso -->
+            <path d="M90 320 Q85 280 90 250 Q100 230 120 225 L170 240 L220 225 Q240 230 250 250 Q255 280 250 320 Q240 380 230 430 L110 430 Q100 380 90 320Z" fill="url(#shirtGrad)"/>
+
+            <!-- Shirt collar -->
+            <path d="M145 238 Q155 260 170 265 Q185 260 195 238 L190 230 Q180 245 170 248 Q160 245 150 230Z" fill="url(#shirtDark)"/>
+
+            <!-- Shirt name text area -->
+            <rect x="140" y="295" width="60" height="20" rx="3" fill="rgba(0,255,156,0.15)" stroke="rgba(0,255,156,0.4)" stroke-width="0.5"/>
+            <text x="170" y="309" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="600" letter-spacing="3" fill="#00ff9c" opacity="0.9">RENCES</text>
+
+            <!-- Neck -->
+            <path d="M155 218 Q155 238 155 240 Q162 245 170 245 Q178 245 185 240 Q185 238 185 218Z" fill="#b07a52"/>
+
+            <!-- Head -->
+            <ellipse cx="170" cy="175" rx="60" ry="68" fill="url(#skinGrad)"/>
+
+            <!-- Head top roundness / hair base -->
+            <path d="M112 165 Q110 100 170 95 Q230 100 228 165" fill="url(#hairGrad)"/>
+
+            <!-- Hair detail top -->
+            <path d="M117 150 Q118 105 170 98 Q222 105 223 150 Q215 130 170 128 Q125 130 117 150Z" fill="#111"/>
+
+            <!-- Fade sides -->
+            <path d="M112 165 Q108 145 114 130 Q120 118 130 112 Q125 130 118 152Z" fill="#1a1a1a"/>
+            <path d="M228 165 Q232 145 226 130 Q220 118 210 112 Q215 130 222 152Z" fill="#1a1a1a"/>
+
+            <!-- Ear left -->
+            <ellipse cx="110" cy="180" rx="9" ry="12" fill="#b07a52"/>
+            <ellipse cx="111" cy="180" rx="5" ry="8" fill="#985f3d"/>
+
+            <!-- Ear right -->
+            <ellipse cx="230" cy="180" rx="9" ry="12" fill="#b07a52"/>
+            <ellipse cx="229" cy="180" rx="5" ry="8" fill="#985f3d"/>
+
+            <!-- Eyes -->
+            <ellipse cx="148" cy="178" rx="14" ry="11" fill="#fff" opacity="0.97"/>
+            <ellipse cx="192" cy="178" rx="14" ry="11" fill="#fff" opacity="0.97"/>
+            <!-- Iris left -->
+            <circle cx="150" cy="179" r="8" fill="#3a2010"/>
+            <circle cx="150" cy="179" r="5" fill="#1a0e08"/>
+            <circle cx="153" cy="176" r="2" fill="#fff" opacity="0.8"/>
+            <!-- Iris right -->
+            <circle cx="190" cy="179" r="8" fill="#3a2010"/>
+            <circle cx="190" cy="179" r="5" fill="#1a0e08"/>
+            <circle cx="193" cy="176" r="2" fill="#fff" opacity="0.8"/>
+
+            <!-- Eyebrows -->
+            <path d="M133 163 Q147 157 163 161" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <path d="M177 161 Q193 157 207 163" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+            <!-- Nose -->
+            <path d="M165 185 Q162 200 158 208 Q164 213 170 213 Q176 213 182 208 Q178 200 175 185" fill="url(#noseShadow)" opacity="0.6"/>
+            <ellipse cx="162" cy="209" rx="5" ry="3.5" fill="#985f3d"/>
+            <ellipse cx="178" cy="209" rx="5" ry="3.5" fill="#985f3d"/>
+
+            <!-- Mouth / slight frown -->
+            <path d="M157 225 Q165 221 170 222 Q175 221 183 225" stroke="#7a3f20" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M160 227 Q170 232 180 227" stroke="#7a3f20" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+            <!-- Beard -->
+            <path d="M128 210 Q124 230 128 250 Q140 268 170 272 Q200 268 212 250 Q216 230 212 210 Q200 225 170 228 Q140 225 128 210Z" fill="url(#beardGrad)" opacity="0.9"/>
+            <!-- Beard fade edges -->
+            <path d="M128 210 Q120 225 124 248 Q130 262 145 268 Q128 240 128 210Z" fill="#111" opacity="0.5"/>
+            <path d="M212 210 Q220 225 216 248 Q210 262 195 268 Q212 240 212 210Z" fill="#111" opacity="0.5"/>
+
+            <!-- Mustache -->
+            <path d="M155 221 Q163 218 170 220 Q177 218 185 221 Q178 228 170 226 Q162 228 155 221Z" fill="#111" opacity="0.8"/>
+
+            <!-- Rim light effect (green) -->
+            <path d="M112 165 Q100 200 108 250 Q118 295 118 320" stroke="url(#rimGrad)" stroke-width="3" fill="none" opacity="0.6"/>
+
+            <!-- Arms -->
+            <path d="M90 270 Q60 290 50 330 Q45 355 55 370 Q68 365 75 345 Q82 320 95 300Z" fill="url(#shirtGrad)"/>
+            <path d="M250 270 Q280 290 290 330 Q295 355 285 370 Q272 365 265 345 Q258 320 245 300Z" fill="url(#shirtGrad)"/>
+
+            <!-- Hands left -->
+            <ellipse cx="55" cy="375" rx="16" ry="18" fill="#b07a52"/>
+            <path d="M44 370 Q39 362 42 357 Q46 354 50 358 Q48 352 52 349 Q57 347 60 353 Q60 347 64 346 Q69 347 69 354 Q72 350 76 352 Q79 356 76 363 Q70 373 62 378 Q56 380 44 370Z" fill="#b07a52"/>
+
+            <!-- Hands right -->
+            <ellipse cx="285" cy="375" rx="16" ry="18" fill="#b07a52"/>
+            <path d="M296 370 Q301 362 298 357 Q294 354 290 358 Q292 352 288 349 Q283 347 280 353 Q280 347 276 346 Q271 347 271 354 Q268 350 264 352 Q261 356 264 363 Q270 373 278 378 Q284 380 296 370Z" fill="#b07a52"/>
+
+            <!-- Shirt bottom -->
+            <path d="M100 430 Q105 460 108 490 L232 490 Q235 460 240 430Z" fill="url(#shirtGrad)"/>
+
+            <!-- Subtle highlight on face -->
+            <ellipse cx="155" cy="165" rx="18" ry="22" fill="white" opacity="0.05"/>
+
+            <!-- Definitions -->
+            <defs>
+              <linearGradient id="skinGrad" x1="110" y1="110" x2="230" y2="250" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#c8916a"/>
+                <stop offset="50%" stop-color="#b07a52"/>
+                <stop offset="100%" stop-color="#8a5c38"/>
+              </linearGradient>
+              <linearGradient id="hairGrad" x1="110" y1="95" x2="230" y2="165" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1a1a1a"/>
+                <stop offset="100%" stop-color="#2d2010"/>
+              </linearGradient>
+              <linearGradient id="shirtGrad" x1="90" y1="225" x2="250" y2="430" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2d6b45"/>
+                <stop offset="40%" stop-color="#1e5535"/>
+                <stop offset="100%" stop-color="#143d26"/>
+              </linearGradient>
+              <linearGradient id="shirtDark" x1="145" y1="225" x2="195" y2="265" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1a4028"/>
+                <stop offset="100%" stop-color="#0d2419"/>
+              </linearGradient>
+              <linearGradient id="beardGrad" x1="128" y1="210" x2="212" y2="272" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1a1a1a"/>
+                <stop offset="100%" stop-color="#2d1a0a"/>
+              </linearGradient>
+              <radialGradient id="noseShadow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#6b3a1a"/>
+                <stop offset="100%" stop-color="#3d1e08"/>
+              </radialGradient>
+              <linearGradient id="rimGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+                <stop offset="0%" stop-color="#00ff9c" stop-opacity="0"/>
+                <stop offset="40%" stop-color="#00ff9c" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#00ff9c" stop-opacity="0"/>
+              </linearGradient>
+              <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#00ff9c" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+          </svg>
+          <!-- Floating dust particles -->
+          <div class="particle p1"></div>
+          <div class="particle p2"></div>
+          <div class="particle p3"></div>
+          <div class="particle p4"></div>
+          <div class="particle p5"></div>
+        </div>
+
+        <!-- Name layered behind avatar via z-index -->
+        <div class="name-block">
+          <span class="name-rence">R E N C E</span>
+          <h1 class="name-main">Ivann</h1>
+        </div>
+      </div>
+
+      <!-- Right intro -->
+      <div class="hero-right" data-aos="fade-left">
+        <p class="hero-intro">Hi, I'm Ivan, a graphic designer, product designer, and brand illustrator passionate about crafting result driven designs and giving your products an interesting story and look</p>
+      </div>
+    </div>
+
+    <!-- ── TOOLS ROW ── -->
+    <div class="tools-row" data-aos="fade-up">
+      <div class="tool-item">
+        <div class="tool-badge ai-badge">Ai</div>
+        <span>Illustrator</span>
+      </div>
+      <div class="tool-item">
+        <div class="tool-badge ps-badge">Ps</div>
+        <span>Photoshop</span>
+      </div>
+      <div class="tool-item">
+        <div class="tool-badge canva-badge">
+          <svg viewBox="0 0 40 40" width="28" height="28"><circle cx="20" cy="20" r="20" fill="#7D2AE8"/><text x="20" y="26" text-anchor="middle" font-size="18" font-weight="700" fill="white" font-family="sans-serif">c</text></svg>
+        </div>
+        <span>Canva</span>
+      </div>
+      <div class="tool-item">
+        <div class="tool-badge asana-badge">
+          <svg viewBox="0 0 40 40" width="28" height="28"><circle cx="20" cy="14" r="8" fill="#F06A6A"/><circle cx="10" cy="28" r="8" fill="#F06A6A"/><circle cx="30" cy="28" r="8" fill="#F06A6A"/></svg>
+        </div>
+        <span>Asana</span>
+      </div>
+      <div class="tool-item">
+        <div class="tool-badge dropbox-badge">
+          <svg viewBox="0 0 40 40" width="28" height="28"><polygon points="20,5 5,15 20,25 35,15" fill="#0061FF"/><polygon points="5,25 20,35 35,25 20,15" fill="#0061FF"/></svg>
+        </div>
+        <span>Dropbox</span>
+      </div>
+      <div class="tool-item">
+        <div class="tool-badge airtable-badge">
+          <svg viewBox="0 0 40 40" width="28" height="28"><rect x="4" y="12" width="32" height="10" rx="3" fill="#FCB400"/><rect x="4" y="24" width="15" height="10" rx="3" fill="#18BFFF"/><rect x="21" y="24" width="15" height="10" rx="3" fill="#F82B60"/></svg>
+        </div>
+        <span>Airtable</span>
+      </div>
+      <div class="tool-item">
+        <div class="tool-badge ai2-badge">AI+</div>
+        <span>AI Tools</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TAGLINE SECTION ── -->
+  <section class="tagline-section" id="about" data-aos="fade-up">
+    <div class="section-divider"></div>
+    <h2 class="tagline-heading">Crafting incredible, impactful, satisfactory designs, brand identities and many more…</h2>
+    <p class="tagline-sub">Design is not just about pictures, words, logo, color and typography, it is a way of telling a brand's story, communicating ideas, identifying real problems and providing solutions to those who need it. Crafting and curating Memorable designs and branding is what I do very well….</p>
+
+    <!-- Client logos strip -->
+    <div class="client-logos" aria-label="Past clients and platforms">
+      <div class="logos-track">
+        <span class="client-logo">Fiverr</span>
+        <span class="client-logo">Freelancer</span>
+        <span class="client-logo">99designs</span>
+        <span class="client-logo">Upwork</span>
+        <span class="client-logo">Behance</span>
+        <span class="client-logo">Dribbble</span>
+        <span class="client-logo">Adobe</span>
+        <span class="client-logo">Canva</span>
+        <!-- duplicate for seamless loop -->
+        <span class="client-logo">Fiverr</span>
+        <span class="client-logo">Freelancer</span>
+        <span class="client-logo">99designs</span>
+        <span class="client-logo">Upwork</span>
+        <span class="client-logo">Behance</span>
+        <span class="client-logo">Dribbble</span>
+        <span class="client-logo">Adobe</span>
+        <span class="client-logo">Canva</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES SECTION ── -->
+  <section class="services-section" id="catalog">
+    <div class="section-divider"></div>
+    <h2 class="section-heading" data-aos="fade-up">what I do</h2>
+
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <article class="service-card" data-aos="fade-up" data-aos-delay="0" data-tilt>
+        <div class="card-thumb brand-thumb">
+          <div class="thumb-bg"></div>
+          <svg class="thumb-icon" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="22" stroke="#00ff9c" stroke-width="1.5" opacity="0.4"/><path d="M20 38 L24 26 L30 14 L36 26 L40 38" stroke="#00ff9c" stroke-width="2" stroke-linejoin="round" fill="none"/><line x1="22" y1="32" x2="38" y2="32" stroke="#00ff9c" stroke-width="1.5"/></svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Brand Identity &amp;<br>Logo Design</h3>
+          <button class="card-arrow" aria-label="View Brand Identity">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6M12 9l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="service-card" data-aos="fade-up" data-aos-delay="80" data-tilt>
+        <div class="card-thumb social-thumb">
+          <div class="thumb-bg"></div>
+          <svg class="thumb-icon" viewBox="0 0 60 60" fill="none"><rect x="12" y="10" width="36" height="28" rx="4" stroke="#00ff9c" stroke-width="1.5" opacity="0.4"/><path d="M18 22 Q24 16 30 22 Q36 28 42 22" stroke="#00ff9c" stroke-width="2" fill="none"/><circle cx="20" cy="32" r="3" fill="#00ff9c" opacity="0.5"/><circle cx="30" cy="32" r="3" fill="#00ff9c" opacity="0.5"/><circle cx="40" cy="32" r="3" fill="#00ff9c" opacity="0.5"/></svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Social Media Ads/<br>Design</h3>
+          <button class="card-arrow" aria-label="View Social Media">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6M12 9l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="service-card" data-aos="fade-up" data-aos-delay="160" data-tilt>
+        <div class="card-thumb youtube-thumb">
+          <div class="thumb-bg"></div>
+          <svg class="thumb-icon" viewBox="0 0 60 60" fill="none"><rect x="8" y="15" width="44" height="30" rx="6" stroke="#00ff9c" stroke-width="1.5" opacity="0.4"/><polygon points="25,22 25,38 42,30" fill="#00ff9c" opacity="0.6"/></svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">YouTube<br>Thumbnails</h3>
+          <button class="card-arrow" aria-label="View YouTube Thumbnails">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6M12 9l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="service-card" data-aos="fade-up" data-aos-delay="0" data-tilt>
+        <div class="card-thumb movie-thumb">
+          <div class="thumb-bg"></div>
+          <svg class="thumb-icon" viewBox="0 0 60 60" fill="none"><rect x="10" y="8" width="40" height="44" rx="3" stroke="#00ff9c" stroke-width="1.5" opacity="0.4"/><rect x="10" y="8" width="40" height="8" rx="2" fill="#00ff9c" opacity="0.15"/><line x1="18" y1="8" x2="18" y2="16" stroke="#00ff9c" stroke-width="2"/><line x1="26" y1="8" x2="26" y2="16" stroke="#00ff9c" stroke-width="2"/><line x1="34" y1="8" x2="34" y2="16" stroke="#00ff9c" stroke-width="2"/><line x1="42" y1="8" x2="42" y2="16" stroke="#00ff9c" stroke-width="2"/><rect x="16" y="24" width="28" height="18" rx="2" stroke="#00ff9c" stroke-width="1" opacity="0.3"/></svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Movie Posters/<br>Album Covers</h3>
+          <button class="card-arrow" aria-label="View Movie Posters">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6M12 9l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="service-card" data-aos="fade-up" data-aos-delay="80" data-tilt>
+        <div class="card-thumb sports-thumb">
+          <div class="thumb-bg"></div>
+          <svg class="thumb-icon" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="20" stroke="#00ff9c" stroke-width="1.5" opacity="0.4"/><path d="M30 10 Q38 20 38 30 Q38 40 30 50 Q22 40 22 30 Q22 20 30 10Z" stroke="#00ff9c" stroke-width="1.5" fill="none" opacity="0.6"/><line x1="10" y1="30" x2="50" y2="30" stroke="#00ff9c" stroke-width="1.5" opacity="0.6"/></svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Sports Design</h3>
+          <button class="card-arrow" aria-label="View Sports Design">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6M12 9l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="service-card" data-aos="fade-up" data-aos-delay="160" data-tilt>
+        <div class="card-thumb ai-thumb">
+          <div class="thumb-bg"></div>
+          <svg class="thumb-icon" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="14" stroke="#00ff9c" stroke-width="1.5" opacity="0.5"/><path d="M30 10 L30 20 M30 40 L30 50 M10 30 L20 30 M40 30 L50 30" stroke="#00ff9c" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="30" cy="30" r="5" fill="#00ff9c" opacity="0.6"/><path d="M18 18 L24 24 M36 36 L42 42 M42 18 L36 24 M24 36 L18 42" stroke="#00ff9c" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/></svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">AI Prompt for<br>Design and Others</h3>
+          <button class="card-arrow" aria-label="View AI Prompt Design">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6M12 9l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── CONTACT SECTION ── -->
+  <section class="contact-section" id="contact" data-aos="fade-up">
+    <h2 class="contact-heading">Contact me</h2>
+    <div class="social-icons">
+      <a class="social-icon gmail" href="mailto:bigladgraphics@gmail.com" aria-label="Gmail" title="Gmail">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6l8 5 8-5" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span>Gmail</span>
+      </a>
+      <a class="social-icon instagram" href="#" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a class="social-icon whatsapp" href="#" aria-label="WhatsApp" title="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M8 12 Q8 8 12 8 Q16 8 16 12 Q16 15 14 16 L14 18 L12 17 Q8 16 8 12Z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+        <span>Whatsapp</span>
+      </a>
+      <a class="social-icon twitter" href="#" aria-label="X / Twitter" title="X / Twitter">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 4 L20 20 M20 4 L4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>X/Twitter</span>
+      </a>
+      <a class="social-icon pinterest" href="#" aria-label="Pinterest" title="Pinterest">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M10 17 Q9 14 10 12 Q8 11 8 9 Q8 7 12 7 Q16 7 16 10 Q16 14 13 14 Q11 14 11 12 Q11 10 12 9" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+        <span>Pinterest</span>
+      </a>
+      <a class="social-icon behance" href="#" aria-label="Behance" title="Behance">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h6a3 3 0 010 6H4V7z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M4 13h7a3.5 3.5 0 010 7H4V13z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="14" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.5"/><path d="M14 14 Q14 10 17.5 10 Q21 10 21 14H14z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+        <span>Behance</span>
+      </a>
+    </div>
+
+    <div class="footer-note">
+      <p>© 2024 Rence Ivann · All rights reserved</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
