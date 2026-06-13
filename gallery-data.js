@@ -68,3 +68,27 @@ window.GALLERY_DATA = window.GALLERY_DATA.concat([
   { id:"w19", cat:"web3", label:"Web3 Community Banner", image:"images/web3-19.jpg", desc:"Community-focused social banner design.", wide:true, tall:false },
   { id:"w20", cat:"web3", label:"Web3 Brand Post", image:"images/web3-20.jpg", desc:"Brand post design for a web3 crypto project.", wide:false, tall:false }
 ]);
+
+window.GALLERY_DATA = window.GALLERY_DATA.concat([
+  // Social Designs
+  { id:"sc01", cat:"social", label:"Social Media Post Design", image:"images/social-01.jpg", desc:"Social media content design.", wide:true, tall:false },
+  { id:"sc02", cat:"social", label:"Social Campaign Graphic", image:"images/social-02.jpg", desc:"Campaign promotional graphic for social media.", wide:false, tall:false },
+  { id:"sc03", cat:"social", label:"Social Announcement Post", image:"images/social-03.jpg", desc:"Announcement post for social media.", wide:false, tall:false },
+  { id:"sc04", cat:"social", label:"Brand Social Post", image:"images/social-04.jpg", desc:"Branded social media post design.", wide:true, tall:false },
+  { id:"sc05", cat:"social", label:"Social Media Banner", image:"images/social-05.jpg", desc:"Wide banner design for social media platforms.", wide:true, tall:false },
+  { id:"sc06", cat:"social", label:"Social Promo Design", image:"images/social-06.jpg", desc:"Promotional content design for social media.", wide:false, tall:false },
+  { id:"sc07", cat:"social", label:"Social Media Graphic", image:"images/social-07.png", desc:"Branded social media graphic design.", wide:false, tall:false },
+  { id:"sc08", cat:"social", label:"Social Content Post", image:"images/social-08.png", desc:"Social content post for brand engagement.", wide:true, tall:false },
+  { id:"sc09", cat:"social", label:"Social Event Design", image:"images/social-09.png", desc:"Event announcement design for social media.", wide:false, tall:false },
+  { id:"sc10", cat:"social", label:"Social Campaign Post", image:"images/social-10.jpg", desc:"Campaign-style post for social media growth.", wide:false, tall:false },
+  { id:"sc11", cat:"social", label:"Social Media Feature", image:"images/social-11.jpg", desc:"Feature highlight post for brand social channels.", wide:true, tall:false },
+  { id:"sc12", cat:"social", label:"Community Social Post", image:"images/social-12.png", desc:"Community-focused post designed for engagement.", wide:false, tall:false },
+  { id:"sc13", cat:"social", label:"Social Awareness Post", image:"images/social-13.png", desc:"Awareness campaign design for social media.", wide:false, tall:false },
+  { id:"sc14", cat:"social", label:"Social Brand Visual", image:"images/social-14.png", desc:"Brand visual designed for social media use.", wide:true, tall:false },
+  { id:"sc15", cat:"social", label:"Social Media Flyer", image:"images/social-15.png", desc:"Digital flyer designed for social media distribution.", wide:false, tall:false },
+  { id:"sc16", cat:"social", label:"Social Engagement Post", image:"images/social-16.png", desc:"Engagement-focused social media post design.", wide:false, tall:false },
+  { id:"sc17", cat:"social", label:"Social Launch Post", image:"images/social-17.png", desc:"Launch announcement designed for social media.", wide:true, tall:false },
+  { id:"sc18", cat:"social", label:"Social Highlight Design", image:"images/social-18.png", desc:"Highlight post designed for stories and feeds.", wide:false, tall:false },
+  { id:"sc19", cat:"social", label:"Social Media Creative", image:"images/social-19.png", desc:"Creative social media design with bold visuals.", wide:false, tall:false },
+  { id:"sc20", cat:"social", label:"Brand Social Creative", image:"images/social-20.png", desc:"Creative brand visual for social media channels.", wide:true, tall:false }
+]);
