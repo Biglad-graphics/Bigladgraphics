@@ -43,3 +43,28 @@ window.GALLERY_DATA = [
   { id:"m19", cat:"mockup", label:"Dexpay — White Tee", image:"images/mockup-19.jpg", desc:"Dexpay white t-shirt mockup — minimal brand mark and hexagon accent.", wide:false, tall:false },
   { id:"m20", cat:"mockup", label:"Dexpay — Community Tee (Front)", image:"images/mockup-20.jpg", desc:"Dexpay community t-shirt — front view with illustrated group and logo.", wide:true, tall:false }
 ];
+
+// (patch: append web3 entries)
+window.GALLERY_DATA = window.GALLERY_DATA.concat([
+  // Web3 Designs
+  { id:"w01", cat:"web3", label:"Bynomo — Litepaper is Live!", image:"images/web3-01.jpg", desc:"Launch announcement social post for Bynomo's litepaper going live — dark purple cinematic design.", wide:true, tall:false },
+  { id:"w02", cat:"web3", label:"Bynomo — Eid Mubarak", image:"images/web3-02.jpg", desc:"Eid Mubarak greeting post for Bynomo — elegant mosque silhouette and clean typography.", wide:true, tall:false },
+  { id:"w03", cat:"web3", label:"Bynomo — We Are Hiring!", image:"images/web3-03.jpg", desc:"Web3 recruitment post for Bynomo — Senior Solidity & Rust developer roles, dark grid aesthetic.", wide:true, tall:false },
+  { id:"w04", cat:"web3", label:"Bynomo — Show Us, Don't Tell Us", image:"images/web3-04.jpg", desc:"Video creator challenge post for Bynomo — $100 reward campaign, glassmorphism cube design.", wide:true, tall:false },
+  { id:"w05", cat:"web3", label:"Bynomo — Community Post", image:"images/web3-05.jpg", desc:"Social media community engagement design for Bynomo.", wide:false, tall:false },
+  { id:"w06", cat:"web3", label:"Web3 Brand Design", image:"images/web3-06.png", desc:"Web3 brand social post design.", wide:false, tall:false },
+  { id:"w07", cat:"web3", label:"Web3 Social Media Post", image:"images/web3-07.png", desc:"Bold social media design for a web3 brand.", wide:true, tall:false },
+  { id:"w08", cat:"web3", label:"Web3 Announcement Graphic", image:"images/web3-08.png", desc:"Announcement graphic for a web3 project.", wide:false, tall:false },
+  { id:"w09", cat:"web3", label:"Web3 Campaign Design", image:"images/web3-09.png", desc:"Campaign design for a web3 community.", wide:false, tall:false },
+  { id:"w10", cat:"web3", label:"Web3 Community Post", image:"images/web3-10.png", desc:"Web3 community engagement social post.", wide:true, tall:false },
+  { id:"w11", cat:"web3", label:"Web3 Brand Identity Post", image:"images/web3-11.jpg", desc:"Brand identity social post for a web3 project.", wide:false, tall:false },
+  { id:"w12", cat:"web3", label:"Web3 Launch Graphic", image:"images/web3-12.jpg", desc:"Launch announcement visual for a web3 brand.", wide:false, tall:false },
+  { id:"w13", cat:"web3", label:"Web3 Partnership Design", image:"images/web3-13.jpg", desc:"Partnership or collab announcement design for a web3 project.", wide:true, tall:false },
+  { id:"w14", cat:"web3", label:"Web3 Event Post", image:"images/web3-14.jpg", desc:"Event or AMA promotional design for a web3 community.", wide:false, tall:false },
+  { id:"w15", cat:"web3", label:"Web3 Milestone Post", image:"images/web3-15.jpg", desc:"Milestone or achievement celebration post for a web3 brand.", wide:false, tall:false },
+  { id:"w16", cat:"web3", label:"Web3 Product Design", image:"images/web3-16.jpg", desc:"Product feature social post for a web3 platform.", wide:false, tall:false },
+  { id:"w17", cat:"web3", label:"Web3 Update Graphic", image:"images/web3-17.jpg", desc:"Project update announcement graphic.", wide:true, tall:false },
+  { id:"w18", cat:"web3", label:"Web3 Social Banner", image:"images/web3-18.jpg", desc:"Wide social media banner for a web3 project.", wide:true, tall:false },
+  { id:"w19", cat:"web3", label:"Web3 Community Banner", image:"images/web3-19.jpg", desc:"Community-focused social banner design.", wide:true, tall:false },
+  { id:"w20", cat:"web3", label:"Web3 Brand Post", image:"images/web3-20.jpg", desc:"Brand post design for a web3 crypto project.", wide:false, tall:false }
+]);
