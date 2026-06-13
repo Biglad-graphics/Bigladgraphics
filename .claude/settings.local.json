@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"/root/.claude/uploads/1f16cb29-07d4-503c-9b85-9a65eea92081/d35b6200-1000344521.jpg\" /home/user/Bigladgraphics/mascot.jpg && echo \"Copied\")"
+    ]
+  }
+}
