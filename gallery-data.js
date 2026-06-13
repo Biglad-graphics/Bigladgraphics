@@ -1,4 +1,5 @@
 window.GALLERY_DATA = [
+  // Sports Designs
   { id:"s01", cat:"sports", label:"FUNAABSU League Board Committee", image:"images/sports-01.png", desc:"Official board committee announcement design for the FUNAABSU League.", wide:true, tall:false },
   { id:"s02", cat:"sports", label:"Predict Win Get Paid", image:"images/sports-02.png", desc:"Promotional ad design for a sports prediction campaign.", wide:false, tall:false },
   { id:"s03", cat:"sports", label:"FIFA World Cup 2026", image:"images/sports-03.png", desc:"FIFA World Cup 2026 social media post — bold, cinematic tournament branding.", wide:false, tall:false },
@@ -18,5 +19,27 @@ window.GALLERY_DATA = [
   { id:"s17", cat:"sports", label:"Inter-Uni Novelty Football Match", image:"images/sports-17.png", desc:"Promotional design for the Inter-University Novelty Football Match.", wide:false, tall:false },
   { id:"s18", cat:"sports", label:"Travelling Squad Announcement", image:"images/sports-18.png", desc:"Travelling squad announcement card for away fixtures.", wide:false, tall:false },
   { id:"s19", cat:"sports", label:"FUNAAB 4–1 Crawford", image:"images/sports-19.png", desc:"Result graphic celebrating FUNAAB's 4–1 victory over Crawford.", wide:false, tall:false },
-  { id:"s20", cat:"sports", label:"SUG Freshers Cup Draw", image:"images/sports-20.png", desc:"Official bracket draw graphic for the SUG Freshers Cup.", wide:true, tall:false }
+  { id:"s20", cat:"sports", label:"SUG Freshers Cup Draw", image:"images/sports-20.png", desc:"Official bracket draw graphic for the SUG Freshers Cup.", wide:true, tall:false },
+
+  // Mockup Designs
+  { id:"m01", cat:"mockup", label:"Injective Nigeria — Blue Tee", image:"images/mockup-01.png", desc:"Blue t-shirt mockup for Injective Nigeria — branded with the INJ logo and Nigerian flag mark.", wide:false, tall:false },
+  { id:"m02", cat:"mockup", label:"Injective Nigeria — Black Tee", image:"images/mockup-02.png", desc:"Black t-shirt mockup for Injective Nigeria — clean dark colourway.", wide:false, tall:false },
+  { id:"m03", cat:"mockup", label:"Injective Nigeria — Black Hoodie", image:"images/mockup-03.png", desc:"Black hoodie mockup for Injective Nigeria.", wide:false, tall:false },
+  { id:"m04", cat:"mockup", label:"Injective Nigeria — Blue Hoodie", image:"images/mockup-04.png", desc:"Blue hoodie mockup for Injective Nigeria.", wide:false, tall:false },
+  { id:"m05", cat:"mockup", label:"Injective Nigeria — Blue Sweatshirt", image:"images/mockup-05.png", desc:"Blue crewneck sweatshirt mockup for Injective Nigeria.", wide:false, tall:false },
+  { id:"m06", cat:"mockup", label:"Injective Nigeria — Branded Bottle", image:"images/mockup-06.png", desc:"Black branded water bottle mockup for Injective Nigeria.", wide:false, tall:false },
+  { id:"m07", cat:"mockup", label:"Injective Nigeria — Black Sweatshirt", image:"images/mockup-07.png", desc:"Black crewneck sweatshirt mockup for Injective Nigeria.", wide:false, tall:false },
+  { id:"m08", cat:"mockup", label:"G-Spark White Tee — Side View", image:"images/mockup-08.png", desc:"G-Spark branded white t-shirt mockup — angled side view with flag accent.", wide:true, tall:false },
+  { id:"m09", cat:"mockup", label:"G-Spark White Tee — Front", image:"images/mockup-09.png", desc:"G-Spark branded white t-shirt mockup — front-facing clean layout.", wide:false, tall:false },
+  { id:"m10", cat:"mockup", label:"G-Spark Black Tee — Dark Mannequin", image:"images/mockup-10.png", desc:"G-Spark black t-shirt mockup on dark mannequin — bold contrast.", wide:false, tall:false },
+  { id:"m11", cat:"mockup", label:"G-Spark Black Tee — Angled", image:"images/mockup-11.png", desc:"G-Spark black t-shirt on white mannequin — angled view showing full print.", wide:false, tall:false },
+  { id:"m12", cat:"mockup", label:"Silent But Powerful — Black Tee", image:"images/mockup-12.png", desc:"'Silent But Powerful' streetwear tee for Aussmart Luxury — black colourway.", wide:true, tall:false },
+  { id:"m13", cat:"mockup", label:"Silent But Powerful — White Tee", image:"images/mockup-13.png", desc:"'Silent But Powerful' streetwear tee for Aussmart Luxury — white colourway.", wide:false, tall:false },
+  { id:"m14", cat:"mockup", label:"Dexpay — Community Tee (Angled)", image:"images/mockup-14.jpg", desc:"Dexpay community t-shirt mockup — illustrated characters border, angled view.", wide:false, tall:false },
+  { id:"m15", cat:"mockup", label:"Giraffe Tower — Giraffish Tee", image:"images/mockup-15.jpg", desc:"Giraffe Tower 'Giraffish' white t-shirt — bold illustrated print.", wide:false, tall:false },
+  { id:"m16", cat:"mockup", label:"Dexpay — Black Tee", image:"images/mockup-16.jpg", desc:"Dexpay black t-shirt mockup — clean logo placement with hexagon brand mark.", wide:true, tall:false },
+  { id:"m17", cat:"mockup", label:"Giraffish — Trading Tee (Small Print)", image:"images/mockup-17.jpg", desc:"Giraffish 'Stop Trading Time for Money' tee — candlestick chart and character print.", wide:false, tall:false },
+  { id:"m18", cat:"mockup", label:"Giraffish — Trading Tee (Bold Text)", image:"images/mockup-18.jpg", desc:"Giraffish 'Stop Trading Time for Money' — large bold typography front print.", wide:false, tall:false },
+  { id:"m19", cat:"mockup", label:"Dexpay — White Tee", image:"images/mockup-19.jpg", desc:"Dexpay white t-shirt mockup — minimal brand mark and hexagon accent.", wide:false, tall:false },
+  { id:"m20", cat:"mockup", label:"Dexpay — Community Tee (Front)", image:"images/mockup-20.jpg", desc:"Dexpay community t-shirt — front view with illustrated group and logo.", wide:true, tall:false }
 ];
