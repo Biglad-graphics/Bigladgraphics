@@ -1,5 +1,11 @@
 'use strict';
 
+/* ── SCROLL REVEAL (must be defined first — used by renderGallery) ── */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
+
 /* ── GALLERY RENDER ── */
 const CAT_COLOR = { brand:'g-t1', social:'g-t2', mockup:'g-t3', poster:'g-t4', sports:'g-t5' };
 
@@ -7,27 +13,19 @@ function renderGallery(data) {
   const grid = document.getElementById('galleryGrid');
   if (!grid || !data) return;
   grid.innerHTML = data.map(item => {
-    const cls   = 'g-item' + (item.wide ? ' g-wide' : '') + (item.tall ? ' g-tall' : '');
-    const color = CAT_COLOR[item.cat] || 'g-t6';
-    const thumbAttr = item.image
-      ? `style="background-image:url('${item.image}');background-size:cover;background-position:center top"`
-      : '';
-    const thumbClass = 'g-thumb' + (item.image ? '' : ' ' + color);
+    const cls        = 'g-item' + (item.wide ? ' g-wide' : '') + (item.tall ? ' g-tall' : '');
+    const colorClass = CAT_COLOR[item.cat] || 'g-t6';
+    const thumbStyle = item.image ? `style="background-image:url('${item.image}');background-size:cover;background-position:center top"` : '';
+    const thumbClass = 'g-thumb' + (item.image ? '' : ' ' + colorClass);
     return `<div class="${cls}" data-cat="${item.cat}" data-label="${item.label}" data-desc="${item.desc||''}" data-img="${item.image||''}" data-aos="fade-up">
-      <div class="${thumbClass}" ${thumbAttr}><span>${item.label}</span></div>
+      <div class="${thumbClass}" ${thumbStyle}><span>${item.label}</span></div>
     </div>`;
   }).join('');
-  attachGalleryEvents();
   grid.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
+  attachGalleryEvents();
 }
 
 if (window.GALLERY_DATA) renderGallery(window.GALLERY_DATA);
-
-/* ── SCROLL REVEAL ── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('[data-aos]').forEach(el => obs.observe(el));
 
 /* ── NAV SCROLL BG ── */
 const nav = document.getElementById('topNav');
@@ -63,8 +61,7 @@ document.addEventListener('mousemove', e => {
 const countObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
-    const el = e.target;
-    const target = +el.dataset.target;
+    const el = e.target, target = +el.dataset.target;
     const inc = target / (1800 / 16);
     let cur = 0;
     const timer = setInterval(() => {
@@ -78,21 +75,20 @@ const countObs = new IntersectionObserver(entries => {
 document.querySelectorAll('.stat-num[data-target]').forEach(el => countObs.observe(el));
 
 /* ── GALLERY FILTERS + LIGHTBOX ── */
-const lb       = document.getElementById('lightbox');
-const lbOverlay= document.getElementById('lbOverlay');
-const lbClose  = document.getElementById('lbClose');
-const lbPreview= document.getElementById('lbPreview');
-const lbCatEl  = document.getElementById('lbCat');
-const lbTitleEl= document.getElementById('lbTitle');
-const lbDescEl = document.getElementById('lbDesc');
-const lbOrder  = document.getElementById('lbOrder');
-
-const CAT_NAME = { brand:'Branding', social:'Social', mockup:'Mockup', poster:'Posters', sports:'Sports' };
+const lb        = document.getElementById('lightbox');
+const lbOverlay = document.getElementById('lbOverlay');
+const lbClose   = document.getElementById('lbClose');
+const lbPreview = document.getElementById('lbPreview');
+const lbCatEl   = document.getElementById('lbCat');
+const lbTitleEl = document.getElementById('lbTitle');
+const lbDescEl  = document.getElementById('lbDesc');
+const lbOrder   = document.getElementById('lbOrder');
+const CAT_NAME  = { brand:'Branding', social:'Social', mockup:'Mockup', poster:'Posters', sports:'Sports' };
 
 function attachGalleryEvents() {
-  /* Filters */
-  const filterBtns  = document.querySelectorAll('.gf-btn');
+  const filterBtns   = document.querySelectorAll('.gf-btn');
   const galleryItems = document.querySelectorAll('.g-item');
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -107,7 +103,6 @@ function attachGalleryEvents() {
     });
   });
 
-  /* Lightbox open */
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const thumb = item.querySelector('.g-thumb');
@@ -118,9 +113,9 @@ function attachGalleryEvents() {
         lbPreview.appendChild(clone);
       }
       const cat = item.dataset.cat || '';
-      if (lbCatEl)   lbCatEl.textContent   = CAT_NAME[cat] || cat;
-      if (lbTitleEl) lbTitleEl.textContent  = item.dataset.label || '';
-      if (lbDescEl)  lbDescEl.textContent   = item.dataset.desc  || 'A showcase piece from the Biglad Graphics portfolio.';
+      if (lbCatEl)   lbCatEl.textContent  = CAT_NAME[cat] || cat;
+      if (lbTitleEl) lbTitleEl.textContent = item.dataset.label || '';
+      if (lbDescEl)  lbDescEl.textContent  = item.dataset.desc  || 'A showcase piece from the Biglad Graphics portfolio.';
       if (lb) { lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
     });
   });
