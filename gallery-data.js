@@ -1,16 +1,22 @@
-/* ── BIGLAD GALLERY DATA ──
-   Edit via /admin.html — do not modify manually unless you know what you're doing.
-   Each item: { id, cat, label, image, desc, wide, tall }
-   cat options: brand | social | mockup | poster | sports
-*/
 window.GALLERY_DATA = [
-  { id:"1", cat:"brand",  label:"Brand Identity",  image:"", desc:"Logo and complete brand identity design for a client project.", wide:false, tall:false },
-  { id:"2", cat:"social", label:"Social Media Ad",  image:"", desc:"Social media campaign creative — banners, stories and ad visuals.", wide:false, tall:true  },
-  { id:"3", cat:"mockup", label:"Mockup Design",    image:"", desc:"Product mockup and 3D presentation design.", wide:false, tall:false },
-  { id:"4", cat:"poster", label:"Movie Poster",     image:"", desc:"Movie poster design with cinematic typography and visual storytelling.", wide:true,  tall:false },
-  { id:"5", cat:"sports", label:"Sports Design",    image:"", desc:"Sports team graphics — jersey, kit and branding design.", wide:false, tall:false },
-  { id:"6", cat:"brand",  label:"Logo Design",      image:"", desc:"Clean, memorable logo concept crafted for a growing brand.", wide:false, tall:false },
-  { id:"7", cat:"social", label:"Ad Creative",      image:"", desc:"Eye-catching ad creative designed for maximum engagement.", wide:false, tall:false },
-  { id:"8", cat:"mockup", label:"Product Mockup",   image:"", desc:"Realistic product mockup for a packaging and branding project.", wide:false, tall:false },
-  { id:"9", cat:"poster", label:"Album Cover",      image:"", desc:"Music album cover art — bold imagery meets strong typography.", wide:false, tall:false }
+  { id:"s01", cat:"sports", label:"FUNAABSU League Board Committee", image:"images/sports-01.png", desc:"Official board committee announcement design for the FUNAABSU League.", wide:true, tall:false },
+  { id:"s02", cat:"sports", label:"Predict Win Get Paid", image:"images/sports-02.png", desc:"Promotional ad design for a sports prediction campaign.", wide:false, tall:false },
+  { id:"s03", cat:"sports", label:"FIFA World Cup 2026", image:"images/sports-03.png", desc:"FIFA World Cup 2026 social media post — bold, cinematic tournament branding.", wide:false, tall:false },
+  { id:"s04", cat:"sports", label:"FUNAABSU League 2.0 Sponsors", image:"images/sports-04.png", desc:"Sponsors display graphic for FUNAABSU League 2.0.", wide:true, tall:false },
+  { id:"s05", cat:"sports", label:"FUNAABSU × Sofascore Partnership", image:"images/sports-05.png", desc:"Partnership announcement graphic for FUNAABSU and Sofascore.", wide:false, tall:false },
+  { id:"s06", cat:"sports", label:"Matchday 1 Fixture", image:"images/sports-06.png", desc:"Matchday 1 fixture card — dynamic layout with team details.", wide:false, tall:false },
+  { id:"s07", cat:"sports", label:"FA Cup Final — Vortex vs Hydro FC", image:"images/sports-07.png", desc:"FA Cup Final matchday graphic: Vortex FC vs Hydro FC.", wide:false, tall:true },
+  { id:"s08", cat:"sports", label:"SUG Olympics Final '26", image:"images/sports-08.png", desc:"Official finals poster for the SUG Olympics 2026.", wide:false, tall:false },
+  { id:"s09", cat:"sports", label:"FUNAABSU League 2.0 Poster", image:"images/sports-09.png", desc:"Cinematic season poster for FUNAABSU League 2.0.", wide:true, tall:false },
+  { id:"s10", cat:"sports", label:"NAAS FUNAAB vs FASA OOU", image:"images/sports-10.png", desc:"Inter-university matchday graphic — NAAS FUNAAB vs FASA OOU.", wide:false, tall:false },
+  { id:"s11", cat:"sports", label:"SUG Olympics Games Lineup", image:"images/sports-11.png", desc:"Full games lineup graphic for the SUG Olympics.", wide:false, tall:false },
+  { id:"s12", cat:"sports", label:"Eclipse United — Eid Mubarak", image:"images/sports-12.png", desc:"Eid Mubarak greeting graphic from Eclipse United FC.", wide:false, tall:false },
+  { id:"s13", cat:"sports", label:"CYDASSA vs SENIFSSA Matchday", image:"images/sports-13.png", desc:"Matchday fixture card — CYDASSA vs SENIFSSA.", wide:false, tall:false },
+  { id:"s14", cat:"sports", label:"Final Fixture — Coleng vs Coplant", image:"images/sports-14.png", desc:"Final fixture graphic for Coleng vs Coplant.", wide:false, tall:false },
+  { id:"s15", cat:"sports", label:"Starting XI vs CYDASSA", image:"images/sports-15.png", desc:"Starting XI lineup announcement ahead of the CYDASSA clash.", wide:true, tall:false },
+  { id:"s16", cat:"sports", label:"AERD Squad — NAAS", image:"images/sports-16.png", desc:"Official squad graphic for AERD — NAAS Tournament.", wide:false, tall:false },
+  { id:"s17", cat:"sports", label:"Inter-Uni Novelty Football Match", image:"images/sports-17.png", desc:"Promotional design for the Inter-University Novelty Football Match.", wide:false, tall:false },
+  { id:"s18", cat:"sports", label:"Travelling Squad Announcement", image:"images/sports-18.png", desc:"Travelling squad announcement card for away fixtures.", wide:false, tall:false },
+  { id:"s19", cat:"sports", label:"FUNAAB 4–1 Crawford", image:"images/sports-19.png", desc:"Result graphic celebrating FUNAAB's 4–1 victory over Crawford.", wide:false, tall:false },
+  { id:"s20", cat:"sports", label:"SUG Freshers Cup Draw", image:"images/sports-20.png", desc:"Official bracket draw graphic for the SUG Freshers Cup.", wide:true, tall:false }
 ];
